@@ -1,0 +1,13 @@
+C:\Users\PROD-AJTeixeira\Documents\Visual Studio 2017\Projects\SCP_PRODESP\SCP.Dados\bin\Debug\SCP.Dados.dll.config
+C:\Users\PROD-AJTeixeira\Documents\Visual Studio 2017\Projects\SCP_PRODESP\SCP.Dados\bin\Debug\SCP.Dados.dll
+C:\Users\PROD-AJTeixeira\Documents\Visual Studio 2017\Projects\SCP_PRODESP\SCP.Dados\bin\Debug\SCP.Dados.pdb
+C:\Users\PROD-AJTeixeira\Documents\Visual Studio 2017\Projects\SCP_PRODESP\SCP.Dados\bin\Debug\EntityFramework.dll
+C:\Users\PROD-AJTeixeira\Documents\Visual Studio 2017\Projects\SCP_PRODESP\SCP.Dados\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\PROD-AJTeixeira\Documents\Visual Studio 2017\Projects\SCP_PRODESP\SCP.Dados\bin\Debug\SCP.Dominio.dll
+C:\Users\PROD-AJTeixeira\Documents\Visual Studio 2017\Projects\SCP_PRODESP\SCP.Dados\bin\Debug\SCP.Dominio.pdb
+C:\Users\PROD-AJTeixeira\Documents\Visual Studio 2017\Projects\SCP_PRODESP\SCP.Dados\bin\Debug\SCP.Dominio.dll.config
+C:\Users\PROD-AJTeixeira\Documents\Visual Studio 2017\Projects\SCP_PRODESP\SCP.Dados\bin\Debug\EntityFramework.xml
+C:\Users\PROD-AJTeixeira\Documents\Visual Studio 2017\Projects\SCP_PRODESP\SCP.Dados\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\PROD-AJTeixeira\Documents\Visual Studio 2017\Projects\SCP_PRODESP\SCP.Dados\obj\Debug\SCP.Dados.csprojResolveAssemblyReference.cache
+C:\Users\PROD-AJTeixeira\Documents\Visual Studio 2017\Projects\SCP_PRODESP\SCP.Dados\obj\Debug\SCP.Dados.dll
+C:\Users\PROD-AJTeixeira\Documents\Visual Studio 2017\Projects\SCP_PRODESP\SCP.Dados\obj\Debug\SCP.Dados.pdb

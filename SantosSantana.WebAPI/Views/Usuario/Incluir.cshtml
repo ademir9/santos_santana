@@ -1,0 +1,179 @@
+﻿
+@{
+    ViewBag.Title = "Incluir";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Incluir Usuário</h2>
+
+
+<form id="formCadastro" method="post">
+           <div class="row">
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <label for="Nome">Nome*:</label>
+                        <input required="required" type="text" class="form-control" id="Nome" name="Nome" placeholder="Ex.: João" maxlength="50">
+                    </div>
+                </div>
+               <div class="col-md-6">
+                   <div class="form-group">
+                       <label for="CPF">CPF*:</label>
+                       <input required="required" type="text" class="form-control maskCPF" id="CPF" name="CPF" placeholder="Ex.: 010.011.111-00" maxlength="17">
+                   </div>
+               </div>
+            </div>
+            <div class="row">
+                
+                <div class="col-md-3">
+                    <div class="form-group">
+                        <label for="Nacionalidade">Data Nasc.*:</label>
+                        <input required="required" type="text" class="form-control maskData" id="DataNasc" name="DataNasc" placeholder="00/00/0000" maxlength="10">
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="form-group">
+                        <label for="Nacionalidade">Sexo*:</label>
+                        <select id="Sexo" name="Sexo" class="form-control" required="required">
+                            <option value=""></option>
+                            <option value="F">Feminino</option>
+                            <option value="M">Masculino</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <label for="Nacionalidade">Senha*:</label>
+                        <input required="required" type="password" class="form-control maskInt" placeholder="8 caracteres" id="Senha" name="Senha" maxlength="8">
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="form-group">
+                        <label for="CEP">CEP*:</label>
+                        <input required="required" type="text" class="form-control maskCEP" id="CEP" name="CEP" placeholder="Ex.: 01011-100" maxlength="9">
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <label for="Logradouro">Logradouro*:</label>
+                        <input required="required" type="text" class="form-control" id="Logradouro" name="Logradouro" placeholder="Ex.: Rua Boa Vista 253" maxlength="500">
+                    </div>
+                </div>
+                <div class="col-md-2">
+                    <div class="form-group">
+                        <label for="Numero">Número:</label>
+                        <input  type="text" class="form-control" id="Numero" name="Numero" maxlength="10">
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="form-group">
+                        <label for="Complemento">Complemento:</label>
+                        <input type="text" class="form-control" id="Complemento" name="Complemento" maxlength="50">
+                    </div>
+                </div>
+           </div>
+
+    
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <label for="Cidade">Cidade*:</label>
+                        <input required="required" type="text" class="form-control" id="Cidade" name="Cidade" maxlength="50" placeholder="Ex.: São Paulo">
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="form-group">
+                        <label for="Bairro">Bairro*:</label>
+                        <input required="required" type="text" class="form-control" id="Bairro" name="Bairro" maxlength="50" placeholder="Ex.: Centro">
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="form-group">
+                        <label for="Estado">Estado*:</label>
+                        <select required="required" id="UF" class="form-control" name="UF">
+                            <option value="">Selecione</option>
+                            <option value="SP">São Paulo</option>
+                            <option value="PE">Pernambuco</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+               
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="pull-right">
+                        <button type="submit" class="btn btn-sm btn-success">Salvar</button>
+                        @Html.ActionLink("Voltar", "Index", "Usuario", new { }, new { @class = "btn btn-sm btn-danger" })
+                    </div>
+                </div>
+            </div>
+
+
+</form>
+
+
+   
+    @section scripts{
+        @Scripts.Render("~/bundles/mask")
+        <script>
+
+            $(document).ready(function () {
+
+                $("#formCadastro").submit(function (e) {
+                    e.preventDefault();
+
+                    if (!CPFValido($('#formCadastro #CPF').val())) {
+                        ModalDialog("Aviso","CPF inválido.");
+                        return false;
+                    }
+                    if ($('#formCadastro #Senha').val().length != 8) {
+                        ModalDialog("Aviso", "A senha deve conter 8 caracteres.");
+                        return false;
+                    }
+                    
+
+                    var d = $(this).find("#DataNasc").val();
+                    var dTratada = d.substring(6, 10) + "-" + d.substring(3, 5) + "-" + d.substring(0, 2);
+                    
+                   
+                    $.ajax({
+                        url: "http://localhost:50173/api/user/criarusuario",
+                        method: "POST",
+                        data: {
+                            "NOME": $(this).find("#Nome").val(),
+                            "CPF": $(this).find("#CPF").val(),
+                            "Sexo": $(this).find("#Sexo").val(),
+                            "DataNasc": dTratada,
+                            "Senha": $(this).find("#Senha").val(),
+                            "Enderecos": [{
+                                "CEP": $(this).find("#CEP").val(), "Logradouro": $(this).find("#Logradouro").val(),
+                                "Numero": $(this).find("#Numero").val(), "Complemento": $(this).find("#Complemento").val(),
+                                "Cidade": $(this).find("#Cidade").val(), "Bairro": $(this).find("#Bairro").val(),
+                                "UF": $(this).find("#UF").val(),
+                            }]
+                        },
+                        error:
+                        function (r) {
+                            if (r.status == 400)
+                                ModalDialog("Aviso","Ocorreu um erro", r.responseJSON);
+                            else if (r.status == 500)
+                                ModalDialog("Aviso","Ocorreu um erro", "Ocorreu um erro interno no servidor.");
+                        },
+                        success:
+                        function (r) {
+                            ModalDialog("Aviso", r.Msg)
+                            $("#formCadastro")[0].reset();
+                        }
+                    });
+                });
+
+
+            });
+        </script>
+       
+    }
+

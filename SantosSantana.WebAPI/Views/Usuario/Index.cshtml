@@ -1,0 +1,74 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Lista de usuários</h2>
+@Html.ActionLink("Novo Usuário", "Incluir", "Usuario", new { }, new { @class = "btn btn-sm btn-primary pull-right" })
+<br><br>
+<table class="table-responsive table-hover" border="1" id="tbUsuarios" style="width:100%;">
+       
+</table>
+
+
+
+@section scripts{
+    <script>
+        $(document).ready(function () {
+
+
+                $.ajax({
+                    url: "http://localhost:50173/api/user/listarusuario",
+                    method: "Get",
+                    data: {},
+                    error:
+                    function (r) {
+                        if (r.status == 400)
+                            alert("Ocorreu um erro!\n" + r.responseJSON);
+                        else if (r.status == 500)
+                           alert("Ocorreu um erro!\nOcorreu um erro interno no servidor.");
+                    },
+                    success:
+                    function (r) {
+                        populaUsuarios(r);
+                    }
+                });
+
+
+        });
+
+        function populaUsuarios(user) {
+            $('#tbUsuarios tr').remove();
+
+            var texto = "<tr style='font-weight:bold'><td>Nome</td><td>CPF</td><td>Conta</td><td>Agência</td><td>Saldo</td><td>Limite</td><td>Senha</td></tr>";
+
+            $.each(user, function (index, value) {
+                texto += '<tr> ' +
+                                '<td>' + value.Nome + '</td>' +
+                                '<td>' + value.CPF + '</td>' +
+                                '<td>' + value.Conta.NumConta + '</td>' +
+                                '<td>' + value.Conta.NumAgencia + '</td>' +
+                                '<td>' + value.Conta.Saldo.toFixed(2) + '</td>' +
+                                '<td>' + value.Conta.Limite.toFixed(2) + '</td>' +
+                                '<td>' + value.Senha +'</td>' +
+                        '</tr > ';
+            });
+
+            $('#tbUsuarios').append(texto);
+        }
+
+
+
+
+
+
+    </script>
+
+}
+
+
+
+
+
+

@@ -1,0 +1,48 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.26430.14
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Dados", "Dados\Dados.csproj", "{CF859A78-8279-4543-B51F-9A98182FD781}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Dominio", "Dominio\Dominio.csproj", "{EC66015E-E9ED-4FFF-8080-B5CE2923FB86}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebAPI", "SantosSantana.WebAPI\WebAPI.csproj", "{444046EA-2CE2-468F-8858-9BA94983843B}"
+	ProjectSection(ProjectDependencies) = postProject
+		{EC66015E-E9ED-4FFF-8080-B5CE2923FB86} = {EC66015E-E9ED-4FFF-8080-B5CE2923FB86}
+		{6637125E-9E2E-4E17-AADF-20326F88899C} = {6637125E-9E2E-4E17-AADF-20326F88899C}
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Servicos", "Servicos\Servicos.csproj", "{6637125E-9E2E-4E17-AADF-20326F88899C}"
+	ProjectSection(ProjectDependencies) = postProject
+		{EC66015E-E9ED-4FFF-8080-B5CE2923FB86} = {EC66015E-E9ED-4FFF-8080-B5CE2923FB86}
+		{CF859A78-8279-4543-B51F-9A98182FD781} = {CF859A78-8279-4543-B51F-9A98182FD781}
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{CF859A78-8279-4543-B51F-9A98182FD781}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CF859A78-8279-4543-B51F-9A98182FD781}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CF859A78-8279-4543-B51F-9A98182FD781}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CF859A78-8279-4543-B51F-9A98182FD781}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EC66015E-E9ED-4FFF-8080-B5CE2923FB86}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EC66015E-E9ED-4FFF-8080-B5CE2923FB86}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EC66015E-E9ED-4FFF-8080-B5CE2923FB86}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EC66015E-E9ED-4FFF-8080-B5CE2923FB86}.Release|Any CPU.Build.0 = Release|Any CPU
+		{444046EA-2CE2-468F-8858-9BA94983843B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{444046EA-2CE2-468F-8858-9BA94983843B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{444046EA-2CE2-468F-8858-9BA94983843B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{444046EA-2CE2-468F-8858-9BA94983843B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6637125E-9E2E-4E17-AADF-20326F88899C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6637125E-9E2E-4E17-AADF-20326F88899C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6637125E-9E2E-4E17-AADF-20326F88899C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6637125E-9E2E-4E17-AADF-20326F88899C}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

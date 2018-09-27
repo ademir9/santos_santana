@@ -1,0 +1,11 @@
+C:\Users\PROD-AJTeixeira\Documents\Visual Studio 2017\Projects\SCP_PRODESP\SAAD2018.Dominio\bin\Release\SCP.Dominio.dll.config
+C:\Users\PROD-AJTeixeira\Documents\Visual Studio 2017\Projects\SCP_PRODESP\SAAD2018.Dominio\bin\Release\SCP.Dominio.dll
+C:\Users\PROD-AJTeixeira\Documents\Visual Studio 2017\Projects\SCP_PRODESP\SAAD2018.Dominio\bin\Release\SCP.Dominio.pdb
+C:\Users\PROD-AJTeixeira\Documents\Visual Studio 2017\Projects\SCP_PRODESP\SAAD2018.Dominio\obj\Release\SCP.Dominio.dll
+C:\Users\PROD-AJTeixeira\Documents\Visual Studio 2017\Projects\SCP_PRODESP\SAAD2018.Dominio\obj\Release\SCP.Dominio.pdb
+C:\Users\PROD-AJTeixeira\Documents\Visual Studio 2017\Projects\SCP_PRODESP\SCP.Dominio\bin\Release\SCP.Dominio.dll.config
+C:\Users\PROD-AJTeixeira\Documents\Visual Studio 2017\Projects\SCP_PRODESP\SCP.Dominio\bin\Release\SCP.Dominio.dll
+C:\Users\PROD-AJTeixeira\Documents\Visual Studio 2017\Projects\SCP_PRODESP\SCP.Dominio\bin\Release\SCP.Dominio.pdb
+C:\Users\PROD-AJTeixeira\Documents\Visual Studio 2017\Projects\SCP_PRODESP\SCP.Dominio\obj\Release\SCP.Dominio.csprojResolveAssemblyReference.cache
+C:\Users\PROD-AJTeixeira\Documents\Visual Studio 2017\Projects\SCP_PRODESP\SCP.Dominio\obj\Release\SCP.Dominio.dll
+C:\Users\PROD-AJTeixeira\Documents\Visual Studio 2017\Projects\SCP_PRODESP\SCP.Dominio\obj\Release\SCP.Dominio.pdb

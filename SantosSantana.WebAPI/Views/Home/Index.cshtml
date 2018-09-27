@@ -1,0 +1,61 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+}
+
+<div class="row">
+    <div class="col-md-12 text-center">
+        <br>
+        <br>
+        <h2>SERVIÇO DE AUTO-ATENDIMENTO</h2>
+        <br>
+        <br>
+    </div>
+</div>
+        
+        <form id="formAcesso" method="post">
+            <div class="row text-center">
+                <div class="col-md-4"></div>
+                 <div class="col-md-4">
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label for="Nome">Conta*:</label>
+                                    <input required="required" type="text" class="form-control maskConta" id="NumConta" name="NumConta" maxlength="5">
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label for="CPF">Agência*:</label>
+                                    <input required="required" type="text" class="form-control" id="NumAgencia" name="NumAgencia" maxlength="4">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-12">
+                                <div class="form-group">
+                                    <label for="CPF">Senha*:</label>
+                                    <input required="required" type="password" class="form-control" id="Senha" name="Senha" maxlength="8">
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-lg-12">
+
+                                <button type="submit" class="btn btn-primary btn-lg btn-block">Entrar</button>
+
+                            </div>
+                        </div>
+                    </div>
+                <div class="col-md-4"></div>
+             </div>
+           
+
+
+        </form>
+
+
+        @section scripts{
+            @Scripts.Render("~/bundles/home/index")
+        }

@@ -1,0 +1,6 @@
+C:\Users\PROD-AJTeixeira\Documents\visual studio 2017\Projects\SAAD2018\SAAD2018.Dominio\bin\Debug\SAAD2018.Dominio.dll.config
+C:\Users\PROD-AJTeixeira\Documents\visual studio 2017\Projects\SAAD2018\SAAD2018.Dominio\bin\Debug\SAAD2018.Dominio.dll
+C:\Users\PROD-AJTeixeira\Documents\visual studio 2017\Projects\SAAD2018\SAAD2018.Dominio\bin\Debug\SAAD2018.Dominio.pdb
+C:\Users\PROD-AJTeixeira\Documents\visual studio 2017\Projects\SAAD2018\SAAD2018.Dominio\obj\Debug\SAAD2018.Dominio.dll
+C:\Users\PROD-AJTeixeira\Documents\visual studio 2017\Projects\SAAD2018\SAAD2018.Dominio\obj\Debug\SAAD2018.Dominio.pdb
+C:\Users\PROD-AJTeixeira\documents\visual studio 2017\Projects\SAAD2018\SAAD2018.Dominio\obj\Debug\SAAD2018.Dominio.csprojResolveAssemblyReference.cache
